@@ -94,6 +94,7 @@
 
 .card-card .detail {
   display: flex;
+  justify-content: center;
 }
 .card-card .video {
   width: 20%;

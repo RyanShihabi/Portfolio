@@ -1,4 +1,5 @@
 import React from "react";
+import { Canvas } from "@react-three/fiber";
 import { StackedCarouselSlideProps } from "react-stacked-center-carousel";
 import "./Slide.css";
 
