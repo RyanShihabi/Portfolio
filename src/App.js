@@ -48,7 +48,7 @@ const CardExample = () => {
                 carouselWidth={width}
                 data={data}
                 maxVisibleSlide={1}
-                customScales={[1, 0.85]}
+                customScales={[1, 1]}
                 transitionTime={450}
               />
             );

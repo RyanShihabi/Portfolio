@@ -28,6 +28,13 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
       </div>
       <div className="detail fill">
         <div className="description">
+        <Canvas className="cover-image">
+          <pointLight position={[10, 10, 10]} />
+          <mesh>
+            <sphereGeometry />
+            <meshStandardMaterial color="hotpink" />
+          </mesh>
+        </Canvas>
           <img
             style={{ width: 100 }}
             alt="j"
