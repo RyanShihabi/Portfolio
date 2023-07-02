@@ -17,11 +17,27 @@ const data = [
   }
 ];
 
+const clickLeft = (ref) => {
+  
+  console.log(ref);
+  ref.current?.goBack()
+}
+
 const CardExample = () => {
   const ref = React.useRef(StackedCarousel);
+
+  // console.log(ref);
+
+
   return (
-    <div className="card">
-      <div style={{ width: "100%", position: "relative" }}>
+    <div className="card" 
+    style={{  
+      backgroundImage: "url(" + "https://cdn.mos.cms.futurecdn.net/HuGGeENt6kGyixe3hT9tnY.jpg" + ")",
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+    }}>
+      <div style={{ width: "100%", position: "relative" }} >
         <ResponsiveContainer
           carouselRef={ref}
           render={(width, carouselRef) => {
@@ -42,7 +58,7 @@ const CardExample = () => {
         <Fab
           className="card-button left"
           size="small"
-          onClick={() => ref.current?.goBack()}
+          onClick={() => {ref.current?.goBack()}}
         >
           <KeyboardArrowLeftIcon style={{ fontSize: 30 }} />
         </Fab>
