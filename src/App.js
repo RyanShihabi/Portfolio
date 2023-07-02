@@ -11,24 +11,9 @@ import { Slide } from "./Slide";
 
 const data = [
   {
-    image: "https://picsum.photos/200/300/?random=1",
-    text: "hello"
-  },
-  {
-    image: "https://picsum.photos/200/300/?random=12",
-    text: "lel"
-  },
-  {
-    image: "https://picsum.photos/200/300/?random=13",
-    text: "kak"
-  },
-  {
-    image: "https://picsum.photos/200/300/?random=15",
-    text: "kk"
-  },
-  {
-    image: "https://picsum.photos/200/300/?random=10",
-    text: "hello"
+    glb: "/ISS_stationary.jsx",
+    title: "ISS Archaeology Project",
+    text: "ISS Text"
   }
 ];
 
