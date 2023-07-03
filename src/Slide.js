@@ -10,27 +10,23 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
     dataIndex,
     isCenterSlide,
     swipeTo,
-    slideIndex
+    slideIndex,
   } = StackedCarouselSlideProps;
 
   const title = data[dataIndex].title;
   const text = data[dataIndex].text;
   const textColor = data[dataIndex].textColor;
   const model = data[dataIndex].glb;
-
-
-  // <div
-  //         className="card-overlay fill"
-  //         onClick={() => {
-  //           if (!isCenterSlide) swipeTo(slideIndex);
-  //         }}
-  //       />
+  
 
   return (
     <div className="card-card" draggable={false} >
       <div className={`cover fill ${isCenterSlide ? "off" : "on"}`}>
         <div
           className="card-overlay fill"
+          onClick={() => {
+            if (!isCenterSlide) swipeTo(slideIndex);
+          }}
         />
       </div>
       <div className="detail fill">

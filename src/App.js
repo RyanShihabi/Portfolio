@@ -3,9 +3,6 @@ import {
   StackedCarousel,
   ResponsiveContainer
 } from "react-stacked-center-carousel";
-import { Fab } from '@mui/material';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import "./Slide.css";
 import { Slide } from "./Slide";
 
@@ -31,20 +28,6 @@ const CardExample = () => {
 
   const [background, setBackground] = useState(0);
 
-  const swipeLeft = (ref, background, setBackground) => {
-    if(background > 0){
-      setBackground(background - 1);
-      ref.current?.goBack();
-    }
-  }
-  
-  const swipeRight = (ref, background, setBackground) => {
-    if(background < data.length-1){
-      setBackground(background + 1);
-      ref.current?.goNext();
-    }
-  }  
-
   return (
     <div className="card" 
     style={{  
@@ -65,17 +48,17 @@ const CardExample = () => {
                 slideWidth={width*0.5}
                 carouselWidth={width}
                 data={data}
-                disableSwipe
                 maxVisibleSlide={1}
                 customScales={[1, 1]}
-                transitionTime={0}
+                transitionTime={500}
                 height={window.innerHeight}
+                onActiveSlideChange={(activeSlide) => setBackground(activeSlide)}
               />
             );
           }}
         />
 
-        <Fab
+        {/* <Fab
           className="card-button left"
           size="large"
           onClick={() => {swipeLeft(ref, background, setBackground)}}
@@ -88,9 +71,9 @@ const CardExample = () => {
           size="large"
           
           onClick={() => {swipeRight(ref, background, setBackground)}}
-        >
-          <KeyboardArrowRightIcon style={{ height: "100%", fontSize: 30 }} />
-        </Fab>
+        > */}
+          {/* <KeyboardArrowRightIcon style={{ height: "100%", fontSize: 30 }} /> */}
+        {/* </Fab> */}
       </div>
     </div>
   );
