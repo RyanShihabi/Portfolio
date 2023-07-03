@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StackedCarousel,
   ResponsiveContainer
@@ -13,31 +13,39 @@ const data = [
   {
     glb: "/ISS_stationary.jsx",
     title: "ISS Archaeology Project",
+    background: "https://cdn.mos.cms.futurecdn.net/HuGGeENt6kGyixe3hT9tnY.jpg",
     text: "ISS Text"
   }
 ];
 
-const clickLeft = (ref) => {
-  
-  console.log(ref);
-  ref.current?.goBack()
-}
-
 const CardExample = () => {
   const ref = React.useRef(StackedCarousel);
 
-  // console.log(ref);
+  const [background, setBackground] = useState(0);
 
+  const swipeLeft = (ref, background, setBackground) => {
+    console.log("Called");
+    setBackground(background => (background - 1) % data.length);
+    console.log(background);
+    ref.current?.swipeTo(background);
+  }
+  
+  const swipeRight = (ref, background, setBackground) => {
+    console.log("Called");
+    setBackground(background => (background + 1) % data.length);
+    console.log(background);
+    ref.current?.swipeTo(background);
+  }  
 
   return (
     <div className="card" 
     style={{  
-      backgroundImage: "url(" + "https://cdn.mos.cms.futurecdn.net/HuGGeENt6kGyixe3hT9tnY.jpg" + ")",
+      backgroundImage: "url(" + data[background].background + ")",
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}>
-      <div style={{ width: "100%", position: "relative" }} >
+      <div style={{ width: "100%", height: "100vh", position: "relative" }} >
         <ResponsiveContainer
           carouselRef={ref}
           render={(width, carouselRef) => {
@@ -48,6 +56,7 @@ const CardExample = () => {
                 slideWidth={width*0.5}
                 carouselWidth={width}
                 data={data}
+                disableSwipe
                 maxVisibleSlide={1}
                 customScales={[1, 1]}
                 transitionTime={450}
@@ -58,14 +67,14 @@ const CardExample = () => {
         <Fab
           className="card-button left"
           size="small"
-          onClick={() => {ref.current?.goBack()}}
+          onClick={() => {swipeLeft(ref, background, setBackground)}}
         >
           <KeyboardArrowLeftIcon style={{ fontSize: 30 }} />
         </Fab>
         <Fab
           className="card-button right"
           size="small"
-          onClick={() => ref.current?.goNext()}
+          onClick={() => {swipeRight(ref, background, setBackground)}}
         >
           <KeyboardArrowRightIcon style={{ fontSize: 30 }} />
         </Fab>
