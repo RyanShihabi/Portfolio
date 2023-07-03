@@ -19,7 +19,7 @@ export function Model(props) {
   useFrame((state, delta) => (ref.current.rotation.y += (delta*0.5)))
 
   return (
-    <group {...props} dispose={null} ref={ref} >
+    <group {...props} dispose={null} ref={ref} rotation={[Math.PI/8, 0, 0]}>
       <group position={[0.001, 0.033, -0.001]}>
         <mesh geometry={nodes.primitive_0.geometry} material={materials.issmod_with_Tex} />
         <mesh geometry={nodes.primitive_1.geometry} material={materials.white} />
