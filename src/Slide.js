@@ -2,6 +2,7 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { ISS } from "./Iss-_international_space_station"
 import { Sale } from "./sale"
+import { CDL } from "./Cdl"
 import "./Slide.css";
 
 export const Slide = React.memo(function (StackedCarouselSlideProps) {
@@ -36,6 +37,7 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
             <pointLight position={[-10, 10, 10]} />
             {model === 0 ? <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/> : <></>}
             {model === 1 ? <Sale scale={[4, 4, 4]}/>: <></>}
+            {model === 4 ? <CDL position={[0, 0, 1]}/>: <></>}
 
             {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
             <Sale scale={[4, 4, 4]}/> */}
