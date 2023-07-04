@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   StackedCarousel,
   ResponsiveContainer
@@ -60,9 +60,25 @@ const data = [
 ];
 
 const CardExample = () => {
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress, true)
+  }, [])
+
   const ref = React.useRef(StackedCarousel);
 
   const [background, setBackground] = useState(0);
+
+  const handleKeyPress = (e) => {
+    console.log(e);
+    if(e.keyCode === 37 || e.keyCode === 65){
+      console.log("Left");
+      ref.current?.goNext();
+    }
+    else if(e.keyCode === 39 || e.keyCode === 68){
+      console.log("Right");
+      ref.current?.goBack();
+    }
+  }
 
   return (
     <div className="card" 
