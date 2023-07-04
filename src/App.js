@@ -8,14 +8,14 @@ import { Slide } from "./Slide";
 
 const data = [
   {
-    glb: "/ISS_stationary.jsx",
+    glb: 0,
     title: "ISS Archaeology Project",
     backgroundPicture: "url(/space.jpg)",
     text: "ISS Text",
     textColor: "white"
   },
   {
-    glb: "/ISS_stationary.jsx",
+    glb: 1,
     title: "SAP Grocery Store Sale Detection",
     backgroundPicture: "url(/cover.jpg)",
     text: "GSD Text",
@@ -50,7 +50,7 @@ const CardExample = () => {
                 data={data}
                 maxVisibleSlide={1}
                 customScales={[1, 1]}
-                transitionTime={500}
+                transitionTime={0}
                 height={window.innerHeight}
                 onActiveSlideChange={(activeSlide) => setBackground(activeSlide)}
               />

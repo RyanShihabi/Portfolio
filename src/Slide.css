@@ -1,3 +1,7 @@
+.card {
+  transition: all 1ms ease;
+}
+
 .card .card-button {
   position: absolute;
   top: 0%;

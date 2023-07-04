@@ -1,7 +1,7 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import { Model } from "./Iss-_international_space_station"
-import { StackedCarouselSlideProps } from "react-stacked-center-carousel";
+import { ISS } from "./Iss-_international_space_station"
+import { Sale } from "./sale"
 import "./Slide.css";
 
 export const Slide = React.memo(function (StackedCarouselSlideProps) {
@@ -33,7 +33,12 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
         <div className="description" style={{color: textColor}}>
           <Canvas style={{ width: "50vw", height: "30vh" }}>
             <pointLight position={[10, 10, 10]} />
-            <Model position={[0, -1, -1]} scale={[40, 40, 40]}/>
+            <pointLight position={[-10, 10, 10]} />
+            {model === 0 ? <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/> : <></>}
+            {model === 1 ? <Sale scale={[4, 4, 4]}/>: <></>}
+
+            {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
+            <Sale scale={[4, 4, 4]}/> */}
           </Canvas>
           <p>{title}</p>
           <p>{text}</p>
