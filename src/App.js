@@ -18,7 +18,7 @@ const data = [
     glb: 1,
     title: "SAP Grocery Store Sale Detection",
     backgroundPicture: "url(/cover.jpg)",
-    text: "GSD Text",
+    text: "A freelance project for SAP with the challenge of verifying in-store grocery discounts for commercial products. I wanted to create an object detection model in order to instantly count and identify different sales found in pictures. The pictures would be taken through a mobile application by the store clerks or crowd-sourced users. I directed a team of five other students at my university to help develop my proposed solution. After labeling a sale dataset from scratch, the trained YOLOv5 object detection model is capable of recognizing and detecting differenct types sales with a 95% precision and recall. There is another project card that goes into detail of how I hosted the inference API at my university.",
     textColor: "black"
   }
 ];

@@ -40,8 +40,8 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
             {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
             <Sale scale={[4, 4, 4]}/> */}
           </Canvas>
-          <p>{title}</p>
-          <p>{text}</p>
+          <p className="description-title">{title}</p>
+          <p className="description-text">{text}</p>
         </div>
       </div>
     </div>

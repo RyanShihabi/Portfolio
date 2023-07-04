@@ -113,7 +113,24 @@
   align-content: center;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px;
+  padding: 0px 10px;
+  /* overflow: scroll;  */
+}
+
+.description-title {
+  font-size: 28px;
+  align-content: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.description-text {
+  /* letter-spacing: 3px; */
+  /* word-spacing: 10px; */
+  /* margin-top: 10px; */
+  align-content: center;
+  padding: 0px 20px;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .background{
