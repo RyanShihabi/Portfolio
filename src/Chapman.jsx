@@ -12,10 +12,10 @@ export function Chapman(props) {
   
   const ref = useRef();
 
-  useFrame((state, delta) => (ref.current.rotation.y += (delta*0.5)))
+  useFrame((state, delta) => (ref.current.rotation.z += (delta*0.5)))
 
   return (
-    <group {...props} dispose={null} rotation={[Math.PI/2, 0, 0]}>
+    <group {...props} dispose={null} ref={ref}>
       <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.001']} position={[-0.001, 0, 0.001]} />
       <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.001']} position={[-0.001, 0, 0.001]} />
       <mesh geometry={nodes.Curve002.geometry} material={materials['SVGMat.001']} position={[-0.001, 0, 0.001]} />

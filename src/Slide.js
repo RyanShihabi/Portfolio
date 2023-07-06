@@ -5,6 +5,8 @@ import { Sale } from "./sale"
 import { CDL } from "./Cdl"
 import { Valorant } from "./Valorant_logo"
 import { Chapman } from "./Chapman"
+import { Mag } from "./Magnifying_glass"
+import { Book } from "./Low_poly_book"
 import "./Slide.css";
 
 export const Slide = React.memo(function (StackedCarouselSlideProps) {
@@ -40,8 +42,10 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
             {model === 0 ? <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/> : <></>}
             {model === 1 ? <Sale scale={[4, 4, 4]}/> : <></>}
             {model === 2 ? <Valorant scale={[4, 4, 4]}/> : <></>}
-            {/* {model === 3 ? <Chapman scale={[60, 60, 60]} /> : <></>} */}
+            {model === 3 ? <Chapman scale={[60, 60, 60]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
             {model === 4 ? <CDL position={[0, 0, 0]}/> : <></>}
+            {model === 5 ? <Mag /> : <></>}
+            {model === 6 ? <Book position={[-1, -3, 0]}/> : <></>}
 
             {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
             <Sale scale={[4, 4, 4]}/> */}
