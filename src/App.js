@@ -25,7 +25,7 @@ const data = [
     glb: 2,
     title: "Real-Time Sports Data",
     backgroundPicture: "url(/TSC.png)",
-    text: "I'm in the process of building a collection of object detection models and OCRs to provide open-source tools for gathering real-time data from sports boradcasts. I am starting with the ESports industry due to my connections with Riot Games and their recent partnership with AWS. I hope this project can help break the model of large tech monopolies owning real-time analytics for entire leagues and associations.",
+    text: "I'm in the process of building a collection of object detection models and OCRs to provide open-source tools for gathering real-time data from sports boradcasts. I am starting with the eSports industry due to my connections with Riot Games and their recent partnership with AWS. I hope this project can help break the model of large tech monopolies owning real-time analytics for entire leagues and associations.",
     textColor: "white"
   },
   {
