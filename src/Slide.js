@@ -39,13 +39,13 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
           <Canvas style={{ width: "50vw", height: "30vh" }}>
             <pointLight position={[10, 10, 10]} />
             <pointLight position={[-10, 10, 10]} />
-            {model === 0 ? <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/> : <></>}
-            {model === 1 ? <Sale scale={[4, 4, 4]}/> : <></>}
-            {model === 2 ? <Valorant scale={[4, 4, 4]}/> : <></>}
-            {model === 3 ? <Chapman scale={[60, 60, 60]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
-            {model === 4 ? <CDL position={[0, 0, 0]}/> : <></>}
-            {model === 5 ? <Mag /> : <></>}
-            {model === 6 ? <Book position={[-1, -3, 0]}/> : <></>}
+            {model === 1 ? <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/> : <></>}
+            {model === 2 ? <Sale scale={[4, 4, 4]}/> : <></>}
+            {model === 3 ? <Valorant scale={[4, 4, 4]}/> : <></>}
+            {model === 4 ? <Chapman scale={[60, 60, 60]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
+            {model === 5 ? <CDL position={[0, 0, 0]}/> : <></>}
+            {model === 6 ? <Mag /> : <></>}
+            {model === 7 ? <Book position={[0, -3, 0]}/> : <></>}
 
             {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
             <Sale scale={[4, 4, 4]}/> */}
