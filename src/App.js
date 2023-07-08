@@ -93,8 +93,6 @@ const CardExample = () => {
     }
   }
 
-  let responsiveSlideWidth = 0.5;
-
   return (
     <div className="card" 
     style={{  
@@ -108,12 +106,12 @@ const CardExample = () => {
         <ResponsiveContainer
           carouselRef={ref}
           render={(width, carouselRef) => {
-            responsiveSlideWidth = calcSlideWidthRatio(width);
+            let responsiveSlideWidthRatio = calcSlideWidthRatio(width);
             return (
               <StackedCarousel
                 ref={carouselRef}
                 slideComponent={Slide}
-                slideWidth={width*responsiveSlideWidth}
+                slideWidth={width*responsiveSlideWidthRatio}
                 carouselWidth={width}
                 data={data}
                 maxVisibleSlide={1}

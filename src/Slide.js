@@ -22,7 +22,34 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
   const text = data[dataIndex].text;
   const textColor = data[dataIndex].textColor;
   const model = data[dataIndex].glb;
-  
+
+  const calcResponsiveProps = (width) => {
+    if(width > 1200){
+      return {
+        canvasHeight: "400px",
+        titleSize: "32px",
+        textSize: "28px"
+      };
+    }
+    else if(width > 600){
+      return {
+        canvasHeight: "300px",
+        titleSize: "18px",
+        textSize: "16px"
+      };
+    }
+    else{
+      return {
+        canvasHeight: "100px",
+        titleSize: "16px",
+        textSize: "14px"
+      };
+    }
+  }
+
+  let responsive = calcResponsiveProps(window.innerWidth);
+
+  console.log(responsive);
 
   return (
     <div className="card-card" draggable={false} >
@@ -35,23 +62,23 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
         />
       </div>
       <div className="detail fill">
-        <div className="description" style={{color: textColor}}>
-          <Canvas style={{ width: "50vw", height: "30vh" }}>
-            <pointLight position={[10, 10, 10]} />
-            <pointLight position={[-10, 10, 10]} />
-            {model === 1 ? <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/> : <></>}
-            {model === 2 ? <Sale scale={[4, 4, 4]}/> : <></>}
-            {model === 3 ? <Valorant scale={[4, 4, 4]}/> : <></>}
-            {model === 4 ? <Chapman scale={[60, 60, 60]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
-            {model === 5 ? <CDL position={[0, 0, 0]}/> : <></>}
-            {model === 6 ? <Mag /> : <></>}
-            {model === 7 ? <Book position={[0, -3, 0]}/> : <></>}
+        <Canvas style={{ width: responsive.canvasHeight, height: responsive.canvasHeight }}>
+          <pointLight position={[10, 10, 10]} />
+          <pointLight position={[-10, 10, 10]} />
+          {model === 1 ? <ISS position={[0, -0.5, 0]} scale={[30, 30, 30]}/> : <></>}
+          {model === 2 ? <Sale scale={[4, 4, 4]}/> : <></>}
+          {model === 3 ? <Valorant scale={[2.5, 2.5, 2.5]}/> : <></>}
+          {model === 4 ? <Chapman scale={[100, 100, 100]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
+          {model === 5 ? <CDL position={[0, 0, 0]}/> : <></>}
+          {model === 6 ? <Mag /> : <></>}
+          {model === 7 ? <Book position={[0, -3, 0]}/> : <></>}
 
-            {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
-            <Sale scale={[4, 4, 4]}/> */}
-          </Canvas>
-          <p className="description-title">{title}</p>
-          <p className="description-text">{text}</p>
+          {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
+          <Sale scale={[4, 4, 4]}/> */}
+        </Canvas>
+        <div className="description" style={{color: textColor}}>
+          <p className="description-title" style={{fontSize: responsive.titleSize}}>{title}</p>
+          <p className="description-text" style={{fontSize: responsive.textSize}}>{text}</p>
         </div>
       </div>
     </div>

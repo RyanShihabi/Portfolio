@@ -4,6 +4,7 @@ Command: npx gltfjsx@6.2.5 cdl.glb
 */
 
 import React, { useRef } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
@@ -15,10 +16,10 @@ export function CDL(props) {
   useFrame((state, delta) => (ref.current.rotation.z += (delta*0.5)))
   return (
     <group {...props} dispose={null} ref={ref} rotation={[Math.PI/2, 0, 0]}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.001']} scale={30} />
-      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.001']} scale={30} />
-      <mesh geometry={nodes.Curve002.geometry} material={materials['SVGMat.001']} scale={30} />
-      <mesh geometry={nodes.Curve003.geometry} material={materials['SVGMat.001']} scale={30} />
+      <mesh geometry={nodes.Curve.geometry} material={materials.white} scale={30} />
+      <mesh geometry={nodes.Curve001.geometry} material={materials.white} scale={30} />
+      <mesh geometry={nodes.Curve002.geometry} material={materials.white} scale={30} />
+      <mesh geometry={nodes.Curve003.geometry} material={materials.white} scale={30} />
     </group>
   )
 }
