@@ -10,6 +10,7 @@ const data = [
   {
     glb: 0,
     title: "Ryan's Portfolio Website",
+    textColor: "white"
   },
   {
     glb: 1,
