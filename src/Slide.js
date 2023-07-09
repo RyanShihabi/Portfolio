@@ -62,21 +62,21 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
         />
       </div>
       <div className="detail fill">
-        <Canvas style={{ width: responsive.canvasHeight, height: responsive.canvasHeight }}>
-          <pointLight position={[10, 10, 10]} />
-          <pointLight position={[-10, 10, 10]} />
-          {model === 1 ? <ISS position={[0, -0.5, 0]} scale={[30, 30, 30]}/> : <></>}
-          {model === 2 ? <Sale scale={[4, 4, 4]}/> : <></>}
-          {model === 3 ? <Valorant scale={[2.5, 2.5, 2.5]}/> : <></>}
-          {model === 4 ? <Chapman scale={[100, 100, 100]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
-          {model === 5 ? <CDL position={[0, 0, 0]}/> : <></>}
-          {model === 6 ? <Mag /> : <></>}
-          {model === 7 ? <Book position={[0, -3, 0]}/> : <></>}
-
-          {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
-          <Sale scale={[4, 4, 4]}/> */}
-        </Canvas>
         <div className="description" style={{color: textColor}}>
+          <Canvas style={{ width: responsive.canvasHeight, height: responsive.canvasHeight, overflow: "visible" }}>
+            <pointLight position={[10, 10, 10]} />
+            <pointLight position={[-10, 10, 10]} />
+            {model === 1 ? <ISS position={[0, -0.5, 0]} scale={[30, 30, 30]}/> : <></>}
+            {model === 2 ? <Sale scale={[4, 4, 4]}/> : <></>}
+            {model === 3 ? <Valorant scale={[2.5, 2.5, 2.5]}/> : <></>}
+            {model === 4 ? <Chapman scale={[100, 100, 100]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
+            {model === 5 ? <CDL position={[0, 0, 0]}/> : <></>}
+            {model === 6 ? <Mag /> : <></>}
+            {model === 7 ? <Book position={[0, -3, 0]}/> : <></>}
+
+            {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
+            <Sale scale={[4, 4, 4]}/> */}
+          </Canvas>
           <p className="description-title" style={{fontSize: responsive.titleSize}}>{title}</p>
           <p className="description-text" style={{fontSize: responsive.textSize}}>{text}</p>
         </div>
