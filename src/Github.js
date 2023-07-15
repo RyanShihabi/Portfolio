@@ -4,7 +4,7 @@ import * as THREE from 'three'
 
 export default function Model(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF("/github.glb")
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + "/github.glb")
 
   const [git, setGit] = useState(false);
 
@@ -19,4 +19,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload("/github.glb")
+useGLTF.preload(process.env.PUBLIC_URL + "/github.glb")

@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function Sale(props) {
-  const { nodes, materials } = useGLTF('/sale.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/sale.glb')
 
   const ref = useRef();
 
@@ -22,4 +22,4 @@ export function Sale(props) {
   )
 }
 
-useGLTF.preload('/sale.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/sale.glb')

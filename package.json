@@ -1,6 +1,7 @@
 {
   "name": "portfoliov2",
   "version": "0.1.0",
+  "homepage": "https://RyanShihabi.github.io/portfoliov2/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

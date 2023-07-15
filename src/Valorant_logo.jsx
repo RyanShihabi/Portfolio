@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function Valorant(props) {
-  const { nodes, materials } = useGLTF('/valorant_logo.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/valorant_logo.glb')
 
   const ref = useRef();
 
@@ -21,4 +21,4 @@ export function Valorant(props) {
   )
 }
 
-useGLTF.preload('/valorant_logo.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/valorant_logo.glb')

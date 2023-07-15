@@ -12,7 +12,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function ISS(props) {
-  const { nodes, materials } = useGLTF('/iss-_international_space_station.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/iss-_international_space_station.glb')
 
   const ref = useRef();
 

@@ -12,7 +12,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function Mag(props) {
-  const { nodes, materials } = useGLTF('/magnifying_glass.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/magnifying_glass.glb')
 
   const ref = useRef();
 
@@ -30,4 +30,4 @@ export function Mag(props) {
   )
 }
 
-useGLTF.preload('/magnifying_glass.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/magnifying_glass.glb')

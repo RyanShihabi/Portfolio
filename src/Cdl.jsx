@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function CDL(props) {
-  const { nodes, materials } = useGLTF('/cdl_centered.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/cdl_centered.glb')
 
   const ref = useRef();
 

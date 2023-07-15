@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function Chapman(props) {
-  const { nodes, materials } = useGLTF('/chapman.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/chapman.glb')
   
   const ref = useRef();
 

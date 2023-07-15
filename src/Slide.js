@@ -55,7 +55,7 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
 
   let responsive = calcResponsiveProps(window.innerWidth);
 
-  console.log(responsive);
+  // console.log(responsive);
 
   return (
     <div className="card-card" draggable={false} >

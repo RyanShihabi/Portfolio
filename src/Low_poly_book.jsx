@@ -12,7 +12,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function Book(props) {
-  const { nodes, materials } = useGLTF('/low_poly_book.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/low_poly_book.glb')
 
   const ref = useRef();
 
@@ -30,4 +30,4 @@ export function Book(props) {
   )
 }
 
-useGLTF.preload('/low_poly_book.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/low_poly_book.glb')

@@ -4,7 +4,7 @@ import * as THREE from 'three';
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/LinkedIn.glb");
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + "/LinkedIn.glb");
 
   const [linkedin, setLinkedin] = useState(false);
 
@@ -22,4 +22,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/LinkedIn.glb");
+useGLTF.preload(process.env.PUBLIC_URL + "/LinkedIn.glb");
