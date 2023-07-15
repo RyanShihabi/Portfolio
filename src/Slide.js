@@ -20,6 +20,10 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
     slideIndex,
   } = StackedCarouselSlideProps;
 
+  if(dataIndex === undefined){
+    window.location.reload(false);
+  }
+
   const title = data[dataIndex].title;
   const text = data[dataIndex].text;
   const textColor = data[dataIndex].textColor;
@@ -85,7 +89,7 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
             <p className="description-text" style={{fontSize: responsive.textSize}}>{text}</p>
           </>
           : <><p className="description-title-main" style={{fontSize: responsive.titleSize}}>{title}</p>
-            <Canvas>
+            <Canvas style={{ width: "100%", height: responsive.canvasHeight, overflow: "visible" }}>
               <pointLight position={[10, 10, 10]} intensity={0.6}/>
               <pointLight position={[-10, 10, 10]} intensity={0.6}/>
               <Github scale={[0.1, 0.1, 0.1]} position={[-3, 0, 0]}/>
