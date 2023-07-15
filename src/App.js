@@ -10,6 +10,7 @@ const data = [
   {
     glb: 0,
     title: "Ryan's Portfolio Website",
+    text: "Swipe, drag, press (←, a), (→, d), or click the outer parts of the screen to navigate through my projects",
     textColor: "white"
   },
   {
@@ -124,23 +125,6 @@ const CardExample = () => {
             );
           }}
         />
-
-        {/* <Fab
-          className="card-button left"
-          size="large"
-          onClick={() => {swipeLeft(ref, background, setBackground)}}
-        >
-          <KeyboardArrowLeftIcon style={{ height: "100%", fontSize: 30 }} />
-        </Fab>
-        
-        <Fab
-          className="card-button right"
-          size="large"
-          
-          onClick={() => {swipeRight(ref, background, setBackground)}}
-        > */}
-          {/* <KeyboardArrowRightIcon style={{ height: "100%", fontSize: 30 }} /> */}
-        {/* </Fab> */}
       </div>
     </div>
   );

@@ -7,6 +7,8 @@ import { Valorant } from "./Valorant_logo"
 import { Chapman } from "./Chapman"
 import { Mag } from "./Magnifying_glass"
 import { Book } from "./Low_poly_book"
+import Github from "./Github"
+import LinkedIn from "./LinkedIn"
 import "./Slide.css";
 
 export const Slide = React.memo(function (StackedCarouselSlideProps) {
@@ -84,8 +86,10 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
           </>
           : <><p className="description-title-main" style={{fontSize: responsive.titleSize}}>{title}</p>
             <Canvas>
-              <pointLight position={[10, 10, 10]} />
-              <pointLight position={[-10, 10, 10]} />
+              <pointLight position={[10, 10, 10]} intensity={0.6}/>
+              <pointLight position={[-10, 10, 10]} intensity={0.6}/>
+              <Github scale={[0.1, 0.1, 0.1]} position={[-3, 0, 0]}/>
+              <LinkedIn scale={[0.15, 0.15, 0.15]} position={[2, 0, 0]}/>
             </Canvas>
             <p className="description-text-main" style={{fontSize: responsive.textSize}}>{text}</p></>}
         </div>

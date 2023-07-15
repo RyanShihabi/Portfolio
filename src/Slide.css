@@ -147,6 +147,15 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+.description-text-main {
+  /* letter-spacing: 3px; */
+  /* word-spacing: 10px; */
+  /* margin-top: 10px; */
+  align-content: center;
+  padding: 0px 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .background{
   background-image: url("https://cdn.mos.cms.futurecdn.net/HuGGeENt6kGyixe3hT9tnY.jpg");
 }
