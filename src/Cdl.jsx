@@ -4,7 +4,6 @@ Command: npx gltfjsx@6.2.5 cdl.glb
 */
 
 import React, { useRef } from 'react'
-import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
