@@ -7,6 +7,9 @@ import { Valorant } from "./Valorant_logo"
 import { Chapman } from "./Chapman"
 import { Mag } from "./Magnifying_glass"
 import { Book } from "./Low_poly_book"
+import { Cabinet } from "./Fullfoldercabinet"
+import { Server } from "./Server"
+import { Cola } from "./Coca_cola_bottle"
 import Github from "./Github"
 import LinkedIn from "./LinkedIn"
 import "./Slide.css";
@@ -76,11 +79,14 @@ export const Slide = React.memo(function (StackedCarouselSlideProps) {
               <pointLight position={[-10, 10, 10]} />
               {model === 1 ? <ISS position={[0, -0.5, 0]} scale={[30, 30, 30]}/> : <></>}
               {model === 2 ? <Sale scale={[4, 4, 4]}/> : <></>}
-              {model === 3 ? <Valorant scale={[2.5, 2.5, 2.5]}/> : <></>}
-              {model === 4 ? <Chapman scale={[100, 100, 100]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
-              {model === 5 ? <CDL position={[0, 0, 0]}/> : <></>}
-              {model === 6 ? <Mag /> : <></>}
-              {model === 7 ? <Book position={[0, -3, 0]}/> : <></>}
+              {model === 3 ? <Server position={[0, 0, 0]} scale={[1, 1, 1]}/> : <></>}
+              {model === 4 ? <Valorant scale={[2.5, 2.5, 2.5]}/> : <></>}
+              {model === 5 ? <Cola position={[0, -1, 0]} scale={[12, 12, 12]}/> : <></>}
+              {model === 6 ? <Chapman scale={[100, 100, 100]} rotation={[Math.PI/2, 0, 0]}/> : <></>}
+              {model === 7 ? <CDL position={[0, 0, 0]}/> : <></>}
+              {model === 8 ? <Cabinet position={[0, -2, 0]} rotation={[0, 5*-Math.PI/16, 0]} scale={[0.1, 0.1, 0.1]}/> : <></>}
+              {model === 9 ? <Mag /> : <></>}
+              {model === 10 ? <Book position={[0, -3, 0]}/> : <></>}
 
               {/* <ISS position={[0, -1, -1]} scale={[40, 40, 40]}/>
               <Sale scale={[4, 4, 4]}/> */}
