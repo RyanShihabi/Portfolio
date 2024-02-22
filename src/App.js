@@ -139,6 +139,7 @@ const CardExample = () => {
                 maxVisibleSlide={1}
                 customScales={[1, 1]}
                 transitionTime={0}
+                img={data[background].backgroundPicture}
                 height={window.innerHeight}
                 onActiveSlideChange={(activeSlide) => setBackground(activeSlide)}
               />

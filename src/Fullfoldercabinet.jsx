@@ -5,7 +5,6 @@ Command: npx gltfjsx@6.2.5 fullfoldercabinet.glb
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
 
 export function Cabinet(props) {
   const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/fullfoldercabinet.glb')
